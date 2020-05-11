@@ -26,5 +26,3 @@ public class InsertionSort implements ISort {
         return compareCount;
     }
 }
-
-//I want to create a compareTo() function that increments a counter for every compare
