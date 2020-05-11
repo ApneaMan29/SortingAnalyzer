@@ -176,11 +176,11 @@ public class TestDriver {
 
     private static void failed() {
         System.out.println("\t\tFAILED");
-        System.exit(0);
+        //System.exit(0);
     }
 
     public static void main(String[] args) {
         testSorts();
-        //testAnalyzer();   // uncomment when you're ready to test the Analyzer
+        testAnalyzer();
     }
 }

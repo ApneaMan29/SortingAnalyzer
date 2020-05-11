@@ -6,9 +6,9 @@ package edu.wou.cs361.sorting;
  */
 
 public class Analysis {
-    private String bigO;
     private double[] ratios;
     private double error;
+    private String bigO;
 
     public Analysis(double[] ratios, double error, String bigO) {
         this.ratios = ratios;

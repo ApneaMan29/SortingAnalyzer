@@ -15,3 +15,4 @@ public interface ISort {
     long sort(final Comparable[] array);
 
 }
+

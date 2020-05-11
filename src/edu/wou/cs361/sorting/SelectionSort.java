@@ -1,20 +1,32 @@
 package edu.wou.cs361.sorting;
 
 public class SelectionSort implements ISort {
-    /**
-     * Sort the array into ascending order using the Selection Sort algorithm
-     *
-     * @param array An Array of Comparable items
-     * @return Returns the number of compares done in the sort
-     * @throws IllegalArgumentException if the argument is null
-     */
+    long compareCount;
+
+    long compareTo2(Comparable c, Comparable to){
+        ++compareCount;
+
+        return c.compareTo(to);
+    }
+
     @Override
     public long sort(final Comparable[] array) {
+        compareCount = 0L;
+
         if (array == null) throw new IllegalArgumentException();
 
-        // your code here
+        for (var i = 0; i < array.length-1; ++i) {
+            var min = i;
+            for (var j = i + 1; j < array.length; ++j)
+                if (compareTo2(array[j], array[min]) < 0)
+                    min = j;
 
-        return 0L;
+            var tmp = array[min];
+            array[min] = array[i];
+            array[i] = tmp;
+        }
+
+        return compareCount;
     }
 
 }
