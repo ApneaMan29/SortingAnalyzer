@@ -17,7 +17,7 @@ public class Analyzer implements IAnalyzer {
      */
     @Override
     public Analysis analyze(int[] sizes, long[] compares) {
-        if (sizes.length != compares.length) throw new IllegalArgumentException();
+        //if (sizes.length != compares.length) throw new IllegalArgumentException();
 
         var analysis = new Analysis(null, 0, "");
 
